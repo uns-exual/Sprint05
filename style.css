@@ -1,3 +1,9 @@
+/* for the home page */
+.content {
+margin-right: 10%;
+margin-left: 10%;
+}
+
 .container {
   display: grid;
   align-items: center;
@@ -12,9 +18,11 @@
   top: 20%;
   left: 50%;
   transform: translate(-50%,-50%);
-
-  
 }
+
+.text {
+    text-align: center;
+  }
 
 .banner {
   width: 100%;
@@ -33,6 +41,15 @@
   left: 15%;
   transform: translate(-50%,5px);
 }
+
+.content-img {
+  display: block;
+  margin: auto;
+  width: 30%;
+  height: auto;
+  padding: 20px;
+
+  }
 
 .card {
   position: relative;
@@ -259,4 +276,30 @@ button {
 
 .dropdownDanny:hover .dropdown-contentDanny {
   display: block;
+}
+
+/* for the about_us page */
+.excutive {
+  background-color: #cc7722;
+  padding-top: 20px;
+}
+
+.excu_members {
+    font-family: 'Trebuchet MS', sans-serif;
+    font-size: 30px;
+    padding-left: 0;
+    padding-right: 20px;
+    color: black;
+    padding: 20px;
+}
+
+table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+.th, td {
+  padding: 8px;
+	text-align: center;
+	border-top: 1px solid #ddd;
 }
