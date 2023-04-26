@@ -17,7 +17,3 @@ function how_to_join_link() {
 function testing_link() {
     window.open("testing.html", "_self")
 }
-
-function contact_us_link() {
-    window.open("contact_us.html", "_self")
-}
