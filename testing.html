@@ -3,49 +3,9 @@
   <head>
     <title>Testing Page</title>
     <link rel = "stylesheet" href="style.css">
-   
-    <style>
-        .container {
-    display: grid;
-    flex-wrap: wrap;
-    margin: 10px;
-    position:absolute; 
-    align-items: center;
-    grid-template-columns: 10fr 2fr 2fr;
-    column-gap: 30px;
-    
-}
-
-      /* CSS styles */
-      #calendar {
-        font-family: Arial, sans-serif;
-        border-collapse: collapse;
-        margin: 20px;
-      }
-      #calendar th,
-      #calendar td {
-        border: 1px solid black;
-        padding: 10px;
-        text-align: center;
-      }
-      #calendar th {
-        background-color: lightgray;
-      }
-      #calendar td.today {
-        background-color: lightblue;
-      }
-      #calendar caption {
-        font-size: 24px;
-        font-weight: bold;
-        margin: 20px;
-      }
-      .titleTest{
-        font-family: 'Trebuchet MS', sans-serif;
-        text-align: center;
-       
-      }
-      
-    </style>
+    <link rel = "stylesheet" href="testStyle.css">
+    <script src="testScript.js"></script>
+    <script src="script.js"></script>
   </head>
   <body>
     <div class="navbar">
@@ -106,77 +66,5 @@
 
     
   </body>
-</html>
 
-
-
-
-<script>
-  
-  const daysOfWeek = ["Sun", "Mon", "Tue", "Wed", "Thu", "Fri", "Sat"];
-  const monthsOfYear = [
-    "January",
-    "February",
-    "March",
-    "April",
-    "May",
-    "June",
-    "July",
-    "August",
-    "September",
-    "October",
-    "November",
-    "December",
-  ];
-
-  const calendar = document.getElementById("calendar");
-
-  // Get the current date
-  const today = new Date();
-  const currentDay = today.getDate();
-  const currentMonth = today.getMonth();
-  const currentYear = today.getFullYear();
-
-  // Set the calendar caption
-  const caption = `${monthsOfYear[currentMonth]} ${currentYear}`;
-  calendar.createCaption().innerText = caption;
-
-  // Set the calendar header
-  const headerRow = calendar.insertRow();
-  daysOfWeek.forEach((day) => {
-    const th = document.createElement("th");
-    th.innerText = day;
-    headerRow.appendChild(th);
-  });
-
-  // Set the calendar days
-  const daysInMonth = new Date(currentYear, currentMonth + 1, 0).getDate();
-  const firstDayOfWeek = new Date(currentYear, currentMonth, 1).getDay();
-
-  let date = 1;
-  for (let i = 0; i < 6; i++) {
-    const row = calendar.insertRow();
-    for (let j = 0; j < 7; j++) {
-      const cell = row.insertCell();
-      if (i === 0 && j < firstDayOfWeek) {
-        // Empty cell before the first day of the month
-        cell.innerText = "";
-      } else if (date > daysInMonth) {
-        // Empty cell after the last day of the month
-        cell.innerText = "";
-      } else {
-        // Cell with a date
-        cell.innerText = date;
-        if (date === currentDay) {
-          cell.classList.add("today");
-        }
-        date++;
-      }
-    }
-  }
-;
-
-
-
-</script>
 </html>
