@@ -7,7 +7,7 @@ function governance_link() {
 }
 
 function policies_link() {
-    window.open("policies.html", "_self")
+    window.open("CodeofConduct.html", "_self")
 }
 
 function how_to_join_link() {
