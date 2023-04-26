@@ -193,3 +193,69 @@ button {
   display: block;
 }
 
+.navbarDanny {
+  overflow: hidden;
+  background-color: rgb(189, 107, 0);
+  
+}
+
+.navbarDanny a {
+  float: left;
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 24px;
+  color: #ffffff;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+ 
+}
+
+.dropdownDanny {
+  float: left;
+  overflow: hidden;
+}
+
+.dropdownDanny .dropbtnDanny {
+  font-size: 24px;
+  font-family: Arial, Helvetica, sans-serif;  
+  border: none;
+  outline: none;
+  color: #ffffff;
+  padding: 14px 16px;
+  background-color: inherit;
+  margin: 0;
+ 
+}
+
+.navbarDanny a:hover, .dropdownDanny:hover .dropbtnDanny {
+  background-color: rgb(218, 134, 25);
+}
+
+.dropdown-contentDanny {
+  display: none;
+  position: absolute;
+  background-color: rgb(189, 107, 0);
+  min-width: 160px;
+  box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+  z-index: 1;
+
+}
+
+.dropdown-contentDanny a {
+  float: none;
+  color: white;
+  padding: 12px 16px;
+  text-decoration: none;
+  display: block;
+  text-align: left;
+  font-size: 20px;
+  
+}
+
+.dropdown-contentDanny a:hover {
+  background-color: rgb(218, 134, 25);
+}
+
+.dropdownDanny:hover .dropdown-contentDanny {
+  display: block;
+}
